@@ -1,4 +1,3 @@
-/* ── TOAST ── */
 function showToast(msg, type = '') {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -8,7 +7,6 @@ function showToast(msg, type = '') {
   t._timer = setTimeout(() => t.classList.remove('show'), 3200);
 }
 
-/* ── MODAL ── */
 const overlay = document.getElementById('modal-overlay');
 const modalBody = document.getElementById('modal-body');
 
@@ -27,7 +25,6 @@ function bukaModal(html) {
   document.body.style.overflow = 'hidden';
 }
 
-/* ── DAFTAR MODAL (dari pricing) ── */
 function bukaDaftarModal(plan, price) {
   bukaModal(`
     <h3>Daftar Paket ${plan}</h3>
@@ -87,7 +84,6 @@ function submitDaftar(plan) {
   showToast('Pendaftaran berhasil dikirim! 🎉', 'success');
 }
 
-/* ── FORM KONTAK ── */
 function validateField(inputEl, errEl, rules) {
   const val = inputEl.value.trim();
   for (const [test, msg] of rules) {
@@ -157,7 +153,6 @@ function kirimPesan() {
   }, 1500);
 }
 
-/* ── KONTAK ACTIONS ── */
 function copyPhone() {
   navigator.clipboard.writeText('0812-3456-7890').then(() => {
     showToast('Nomor HP disalin ke clipboard! 📋', 'success');
@@ -175,7 +170,6 @@ function bukaMaps() {
   window.open('https://maps.google.com/?q=Jl.+Suhat+No.123+Malang', '_blank');
 }
 
-/* ── NAVBAR SCROLL & ACTIVE ── */
 const navbar = document.getElementById('navbar');
 const scrollTopBtn = document.getElementById('scroll-top');
 const sections = document.querySelectorAll('section[id]');
@@ -198,7 +192,6 @@ window.addEventListener('scroll', () => {
 
 scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-/* ── HAMBURGER ── */
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
@@ -214,7 +207,6 @@ navItems.forEach(a => a.addEventListener('click', () => {
   hamburger.innerHTML = '&#9776;';
 }));
 
-/* ── SCROLL REVEAL ── */
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
