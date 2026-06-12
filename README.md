@@ -1,40 +1,28 @@
 # Mantap Gym Website
 
-Website profil gym lokal satu halaman, dibuat untuk tugas individu mata kuliah **Dasar Desain Antarmuka Pengguna**.
+Website profile gym sederhana, dibuat untuk tugas individu mata kuliah **Dasar Desain Antarmuka Pengguna**.
 
-## Info
+## Info Pribadi
 
-- **Nama:** Gregorius Nara Pramudita
-- **NIM:** 255150701111019
-- **Mata Kuliah:** [Dasar Desain Antarmuka Pengguna](https://brone.ub.ac.id/course/view.php?id=8347#section-19)
+- **Nama :** Gregorius Nara Pramudita
+- **NIM :** 255150701111019
+- **Kelas :** Teknologi Informasi - C
+- **Mata Kuliah :** Dasar Desain Antarmuka Pengguna
 
-## Teknologi
+## Yang Saya Gunakan untuk Membuat Website Ini
 
-- HTML5
-- CSS3 (Flexbox & Grid)
-- JavaScript Vanilla
-
-Tidak menggunakan framework apapun (no Bootstrap, no Tailwind, no jQuery).
+- HTML
+- CSS (Flexbox & Grid)
+- JavaScript
+(Tidak menggunakan framework)
 
 ## Cara Menjalankan
 
-Download semua file, lalu buka `index.html` di browser. Tidak perlu instalasi apapun.
-
-## Struktur File
-
-```
-├── index.html
-├── style.css
-├── app.js
-└── README.md
-```
+Download semua file, lalu buka `index.html` di browser.
 
 ## Fitur
-
-- Navbar sticky + hamburger menu (mobile)
-- Form pendaftaran dengan validasi input
-- Modal popup saat memilih paket
-- Notifikasi toast
-- Scroll reveal animation
-- Tombol WhatsApp & copy nomor HP
 - Responsif di semua ukuran layar
+- Form pendaftaran dengan validasi input
+- Notifikasi popup
+- Animasi scroll reveal
+- Tombol WhatsApp & copy nomor HP
