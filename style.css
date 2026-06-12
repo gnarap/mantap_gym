@@ -23,7 +23,6 @@ body {
   line-height: 1.6;
 }
 
-/* ── TOAST ── */
 .toast {
   position: fixed;
   bottom: 2rem;
@@ -46,7 +45,6 @@ body {
 .toast.success { border-color: var(--accent); color: var(--accent); }
 .toast.error { border-color: var(--error); color: var(--error); }
 
-/* ── MODAL ── */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -91,7 +89,6 @@ body {
 .modal-success h3 { margin-bottom: 0.5rem; }
 .modal-success p { color: var(--text-muted); font-size: 0.9rem; }
 
-/* ── NAVBAR ── */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -151,7 +148,6 @@ body {
   padding: 0.25rem;
 }
 
-/* ── HERO ── */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -202,7 +198,6 @@ body {
 }
 .btn-cta:hover { background: var(--accent-dark); transform: translateY(-2px); }
 
-/* ── SCROLL REVEAL ── */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -210,7 +205,6 @@ body {
 }
 .reveal.visible { opacity: 1; transform: none; }
 
-/* ── SECTIONS ── */
 section { padding: 100px 5%; }
 .section-header { text-align: center; margin-bottom: 60px; }
 .label-tag {
@@ -228,7 +222,6 @@ section { padding: 100px 5%; }
   letter-spacing: -0.02em;
 }
 
-/* ── FASILITAS ── */
 .fasilitas { background: var(--bg2); }
 .cards {
   display: grid;
@@ -252,7 +245,6 @@ section { padding: 100px 5%; }
 .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; }
 .card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
 
-/* ── HARGA ── */
 .harga { background: var(--bg); }
 .pricing-cards {
   display: grid;
@@ -343,7 +335,6 @@ section { padding: 100px 5%; }
 }
 .btn-plan-accent:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #111; }
 
-/* ── KONTAK ── */
 .kontak { background: var(--bg2); }
 .kontak-grid {
   display: grid;
@@ -439,7 +430,6 @@ section { padding: 100px 5%; }
 .btn-submit:hover:not(:disabled) { background: var(--accent-dark); transform: translateY(-2px); }
 .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
-/* ── SCROLL TOP ── */
 .scroll-top {
   position: fixed;
   bottom: 2rem;
@@ -463,7 +453,6 @@ section { padding: 100px 5%; }
 .scroll-top.visible { opacity: 1; pointer-events: auto; transform: none; }
 .scroll-top:hover { background: var(--accent-dark); }
 
-/* ── FOOTER ── */
 footer {
   background: var(--bg);
   border-top: 1px solid var(--border);
@@ -473,11 +462,9 @@ footer {
   color: #555;
 }
 
-/* ── ANIMATIONS ── */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .pricing-cards { grid-template-columns: 1fr; gap: 1rem; }
