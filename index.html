@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantap Gym</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <div id="modal-overlay" class="modal-overlay" hidden>
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Tutup">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo">MANTAP<span>GYM</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">&#9776;</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home" class="nav-item">Home</a>
+      <a href="#fasilitas" class="nav-item">Fasilitas</a>
+      <a href="#harga" class="nav-item">Harga</a>
+      <a href="#kontak" class="nav-item">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <p class="hero-eyebrow">Malang's NUMBER 1 Gym</p>
+      <h1>MULAI SEKARANG,<br>JANGAN TUNDA LAGI.</h1>
+      <p class="hero-sub">Badan impianmu tidak menunggu. Giliranmu untuk bergerak.</p>
+      <a href="#harga" class="btn-cta">Daftar Sekarang</a>
+    </div>
+  </section>
+
+  <section class="fasilitas" id="fasilitas">
+    <div class="section-header reveal">
+      <p class="label-tag">Kenapa Mantap Gym?</p>
+      <h2>Semua yang Kamu Butuhkan, Ada di Sini</h2>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="card-icon">🏋️</div>
+        <h3>Alat Lengkap</h3>
+        <p>Barbell, dumbbell, cable machine, treadmill, dan puluhan alat lain siap pakai setiap hari.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🕐</div>
+        <h3>Akses 24 Jam</h3>
+        <p>Gym buka nonstop, tujuh hari seminggu. Latihan kapanpun sesuai jadwalmu, bukan jadwal kami.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">💪</div>
+        <h3>Trainer Berpengalaman</h3>
+        <p>Tim personal trainer bersertifikat siap bantu kamu menyusun program latihan yang efektif.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🚿</div>
+        <h3>Loker & Shower</h3>
+        <p>Fasilitas loker aman dan shower bersih tersedia agar kamu bisa langsung ke aktivitas berikutnya.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🧴</div>
+        <h3>Suplemen & Minuman</h3>
+        <p>Tersedia mini bar gym dengan protein shake, air mineral, dan snack sehat di area lobby.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">📡</div>
+        <h3>Wi-Fi Kencang</h3>
+        <p>Streaming playlist atau tutorial latihan tanpa buffering. Fokus latihan, bukan nunggu loading.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="harga" id="harga">
+    <div class="section-header reveal">
+      <p class="label-tag">Paket Membership</p>
+      <h2>Harga Jelas, Tanpa Biaya Tersembunyi</h2>
+    </div>
+    <div class="pricing-cards">
+      <div class="pricing-card reveal" data-plan="Harian" data-price="Rp 25.000/hari">
+        <p class="plan-name">Harian</p>
+        <p class="plan-price">Rp 25.000<span>/hari</span></p>
+        <ul>
+          <li>Akses penuh area gym</li>
+          <li>Loker & shower</li>
+          <li>Handuk tersedia</li>
+          <li>Tanpa komitmen</li>
+        </ul>
+        <button class="btn-plan" onclick="bukaDaftarModal('Harian', 'Rp 25.000/hari')">Pilih Paket</button>
+      </div>
+      <div class="pricing-card popular reveal" data-plan="Bulanan" data-price="Rp 199.000/bulan">
+        <p class="popular-badge">⭐ Paling Populer</p>
+        <p class="plan-name">Bulanan</p>
+        <p class="plan-price">Rp 199.000<span>/bulan</span></p>
+        <ul>
+          <li>Akses 24 jam penuh</li>
+          <li>Loker & shower</li>
+          <li>1x sesi konsultasi trainer</li>
+          <li>Diskon suplemen 10%</li>
+        </ul>
+        <button class="btn-plan btn-plan-accent" onclick="bukaDaftarModal('Bulanan', 'Rp 199.000/bulan')">Pilih Paket</button>
+      </div>
+      <div class="pricing-card reveal" data-plan="Kelas Sesi" data-price="Rp 75.000/sesi">
+        <p class="plan-name">Kelas Sesi</p>
+        <p class="plan-price">Rp 75.000<span>/sesi</span></p>
+        <ul>
+          <li>1 sesi personal training</li>
+          <li>Program latihan custom</li>
+          <li>Evaluasi progress</li>
+          <li>Akses gym hari H</li>
+        </ul>
+        <button class="btn-plan" onclick="bukaDaftarModal('Kelas Sesi', 'Rp 75.000/sesi')">Pilih Paket</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="kontak" id="kontak">
+    <div class="section-header reveal">
+      <p class="label-tag">Hubungi Kami</p>
+      <h2>Siap Mulai? Kami Siap Bantu.</h2>
+    </div>
+    <div class="kontak-grid">
+      <div class="kontak-info reveal">
+        <div class="info-block">
+          <h3>Jam Operasional</h3>
+          <p>Senin – Minggu</p>
+          <p class="accent-text">Buka 24 Jam</p>
+          <p class="note">*Hari libur nasional tetap buka</p>
+        </div>
+        <div class="info-block">
+          <h3>Alamat</h3>
+          <p>Jl. Suhat No. 123,</p>
+          <p>Malang, Jawa Timur 65141</p>
+          <button class="btn-maps" onclick="bukaMaps()">📍 Lihat di Maps</button>
+        </div>
+        <div class="info-block">
+          <h3>Kontak Langsung</h3>
+          <button class="btn-contact-link" onclick="copyPhone()">📱 0812-3456-7890</button>
+          <button class="btn-contact-link" onclick="bukaWA()">💬 Chat via WhatsApp</button>
+        </div>
+      </div>
+      <div class="kontak-form reveal">
+        <h3>Kirim Pesan</h3>
+        <div class="form-group">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" placeholder="Nama lengkapmu" autocomplete="name">
+          <span class="field-error" id="err-nama"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="email@kamu.com" autocomplete="email">
+          <span class="field-error" id="err-email"></span>
+        </div>
+        <div class="form-group">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" rows="4" placeholder="Tanyakan apa saja..."></textarea>
+          <span class="field-error" id="err-pesan"></span>
+        </div>
+        <button class="btn-submit" id="btn-submit" onclick="kirimPesan()">Kirim Pesan</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p> Mantap Gym ©2026 </p>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
